@@ -1,4 +1,4 @@
-package com.example.di_login_twitter.elementos
+package com.example.logininsta.LoginScreen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
@@ -11,15 +11,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PantallaLogin() {
+fun LoginScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(8.dp)
     ) {
-        CerrarVentana(Modifier)
-        Cabecera(Modifier)
+        Header(Modifier.align(Alignment.TopEnd))
+        Body(Modifier.align(Alignment.Center));
+        Spacer(modifier = Modifier.size(16.dp))
     }
-
-
 }

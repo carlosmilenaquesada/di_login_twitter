@@ -1,20 +1,19 @@
-package com.example.di_login_twitter.elementos
+package com.example.logininsta.LoginScreen
 
-import androidx.compose.foundation.Image
-import androidx.compose.material3.Text
+import android.app.Activity
+import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
-import com.example.di_login_twitter.R
+import androidx.compose.ui.platform.LocalContext
 
 @Composable
-
-fun Cabecera(modifier: Modifier) {
-    Image(
-        painter = painterResource(id = R.drawable.logotwitter),
-        contentDescription = null,
-        modifier = modifier
+fun Header(modifier:Modifier) {
+    val activity = LocalContext.current as Activity
+    Icon(imageVector = Icons.Default.Close,
+        contentDescription = "Close app",
+        modifier = modifier.clickable {  activity.finish()}
     )
-    Text(text = "Log in to Twitter")
-
 }
