@@ -4,6 +4,7 @@ import android.R
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -34,7 +35,7 @@ fun Password(password: String, onTextChanged: (String) -> Unit) {
         onValueChange = { onTextChanged(it) },
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 18.dp),
+            .padding(horizontal = 18.dp, vertical = 5.dp),
         trailingIcon = {
             val imagen = if (showPassword) {
                 com.google.android.material.R.drawable.design_ic_visibility_off
@@ -46,7 +47,7 @@ fun Password(password: String, onTextChanged: (String) -> Unit) {
                 modifier = Modifier.clickable {
                     showPassword = !showPassword
                 })
-        },
+        }, shape = RoundedCornerShape(0),
         placeholder = { Text(text = "Password") },
         maxLines = 1,
         singleLine = true,
@@ -54,7 +55,9 @@ fun Password(password: String, onTextChanged: (String) -> Unit) {
         colors = TextFieldDefaults.textFieldColors(
             textColor = Color.Black,
             containerColor = Color(0XFFF4F8F9),
-            focusedIndicatorColor = Color.Transparent
+            focusedIndicatorColor = Color.Transparent,
+            unfocusedIndicatorColor = Color.Black
+
         ),
         visualTransformation = if (showPassword) {
             VisualTransformation.None

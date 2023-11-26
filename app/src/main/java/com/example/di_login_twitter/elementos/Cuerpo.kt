@@ -43,7 +43,6 @@ fun Body(modifier: Modifier) {
         Spacer(modifier = Modifier.size(32.dp))
         SocialLogin()
         Spacer(modifier = Modifier.size(16.dp))
-        ForgotPassword(modifier = Modifier.align(Alignment.CenterHorizontally))
 
     }
 }

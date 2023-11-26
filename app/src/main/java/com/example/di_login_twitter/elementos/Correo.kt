@@ -2,6 +2,7 @@ package com.example.logininsta.LoginScreen
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
@@ -22,6 +23,7 @@ fun Email(email: String, onTextChanged: (String) -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 18.dp),
+        shape = RoundedCornerShape(0),
         placeholder = { Text(text = "Email") },
         maxLines = 1,
         singleLine = true,
@@ -29,7 +31,8 @@ fun Email(email: String, onTextChanged: (String) -> Unit) {
         colors = TextFieldDefaults.textFieldColors(
             textColor = Color.Black,
             containerColor = Color(0xFFF4F8F9),
-            focusedIndicatorColor = Color.Transparent
+            focusedIndicatorColor = Color.Transparent,
+            unfocusedIndicatorColor = Color.Black
         )
 
     )

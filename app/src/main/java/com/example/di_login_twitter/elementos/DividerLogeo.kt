@@ -1,6 +1,5 @@
 package com.example.logininsta.LoginScreen
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,21 +19,21 @@ fun LoginDivider() {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Divider(
             Modifier
-                .background(Color(0xFFF9F9F9))
-                .height(1.dp)
-                .weight(1f)
+                .height(2.dp)
+                .weight(1f),
+            color = Color.Gray
         )
         Text(
-            text = "OR", Modifier.padding(horizontal = 18.dp),
+            text = "Or sign in with", Modifier.padding(horizontal = 18.dp),
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFFB5B5B5)
+            color = Color.Gray
         )
         Divider(
             Modifier
-                .background(Color(0xFFF9F9F9))
-                .height(1.dp)
-                .weight(1f)
+                .height(2.dp)
+                .weight(1f),
+            color = Color.Gray
         )
 
 
