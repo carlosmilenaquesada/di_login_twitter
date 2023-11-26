@@ -13,7 +13,7 @@ fun LoginScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF44556F))
+            .background(Color(0xFFFFFFFF))
     ) {
         Header(Modifier.align(Alignment.TopEnd))
         Body(Modifier.align(Alignment.Center))
